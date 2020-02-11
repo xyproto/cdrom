@@ -1,3 +1,16 @@
+SPDX-License-Identifier: GPL-2.0 WITH Linux-syscall-note
+
+Based on linux/cdrom.h, which is a general header file for linux CD-ROM drivers 
+Copyright (C) 1992         David Giller, rafetmad@oxy.edu
+              1994, 1995   Eberhard Mönkeberg, emoenke@gwdg.de
+              1996         David van Leeuwen, david@tm.tno.nl
+              1997, 1998   Erik Andersen, andersee@debian.org
+              1998-2002    Jens Axboe, axboe@suse.de
+
+All modifications to cdrom.h, and the Go port of the code is Copyright (C) 2020 Alexander F. Rødseth
+
+The entire project is licensed under GPL2:
+
                     GNU GENERAL PUBLIC LICENSE
                        Version 2, June 1991
 

@@ -1,2 +1,12 @@
 # cd
-Go package that provides the constants from linux/cdrom.h
+
+Go package that provides:
+
+* The constants from linux/cdrom.h
+* A function for ejecting the CD tray
+
+General info:
+
+* Version: 1.0.0
+* License: GPL2
+* Author: Alexander F. Rødseth
