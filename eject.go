@@ -1,4 +1,4 @@
-package cd
+package cdrom
 
 import (
 	"golang.org/x/sys/unix"
@@ -14,14 +14,14 @@ func New() (*CD, error) {
 	if err != nil {
 		return nil, err
 	}
-	return &CD{fd}, nil
+	return &CD{fileDescriptor: fd}, nil
 }
 
-func (c *CD) Eject() {
-	unix.IoctlGetInt(c.fileDescriptor, CDROMEJECT)
-	unix.IoctlGetInt(c.fileDescriptor, CDROMEJECT_SW)
+func (cd *CD) Eject() {
+	unix.IoctlGetInt(cd.fileDescriptor, CDROMEJECT)
+	unix.IoctlGetInt(cd.fileDescriptor, CDROMEJECT_SW)
 }
 
-func (c *CD) Close() error {
-	return syscall.Close(c.fileDescriptor)
+func (cd *CD) Close() error {
+	return syscall.Close(cd.fileDescriptor)
 }

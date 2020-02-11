@@ -1,4 +1,4 @@
-module github.com/xyproto/cd
+module github.com/xyproto/cdrom
 
 go 1.10
 
