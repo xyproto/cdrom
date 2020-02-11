@@ -1,4 +1,4 @@
-# cd
+# cdrom
 
 Go package that provides:
 
