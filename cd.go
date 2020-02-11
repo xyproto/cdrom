@@ -27,10 +27,15 @@ func NewFile(deviceFilename string) (*CD, error) {
 	return &CD{fileDescriptor: fd}, nil
 }
 
-// Ejects uses IOCTL to get CDROMEJECT and CDROMEJECT_SW from the current file descriptor
-func (cd *CD) Eject() {
-	unix.IoctlGetInt(cd.fileDescriptor, CDROMEJECT)
-	unix.IoctlGetInt(cd.fileDescriptor, CDROMEJECT_SW)
+// Ejects performs IOCTL calls, using CDROMEJECT and CDROMEJECT_SW on the current file descriptor
+func (cd *CD) Eject() error {
+	if _, err := unix.IoctlGetInt(cd.fileDescriptor, CDROMEJECT); err != nil {
+		return err
+	}
+	if _, err := unix.IoctlGetInt(cd.fileDescriptor, CDROMEJECT_SW); err != nil {
+		return err
+	}
+	return nil
 }
 
 // Done closes the file descriptor
