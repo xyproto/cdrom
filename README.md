@@ -7,6 +7,6 @@ Go package that provides:
 
 General info:
 
-* Version: 1.0.0
+* Version: 1.0.1
 * License: GPL2
 * Author: Alexander F. Rødseth
