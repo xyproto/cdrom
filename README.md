@@ -7,6 +7,8 @@ This is a Go package that provides:
 
 [Online Documentation](https://godoc.org/github.com/xyproto/cdrom)
 
+See [cupholder](https://github.com/xyproto/cupholder) for a utility that uses this package.
+
 ## General info
 
 * Version: 1.3.0
