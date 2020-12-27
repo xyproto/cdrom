@@ -11,7 +11,7 @@ type CD struct {
 
 // New opens /dev/cdrom and returns a struct with the file descriptor
 func New() (*CD, error) {
-        return NewFile("/dev/cdrom")
+	return NewFile("/dev/cdrom")
 }
 
 // NewFile opens the given device filename and returns a struct with the file descriptor
